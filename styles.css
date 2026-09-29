@@ -1,0 +1,94 @@
+/* css styles */
+
+/* import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap');
+
+body {
+  font-family: "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+/* Version shown under the title-block byline on module HTML pages */
+.quarto-title-meta.module-version {
+  margin-top: -1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Student-task callout (warm tint + left accent bar, auto-numbered "Task N.") */
+body { counter-reset: taskcounter; }
+.task {
+  background: #FAEEDA;
+  border-left: 4px solid #BA7517;
+  border-radius: 0;
+  padding: 0.6rem 0.9rem;
+  margin: 1rem 0;
+  counter-increment: taskcounter;
+}
+.task > :first-child { margin-top: 0; }
+.task > :last-child { margin-bottom: 0; }
+.task > :first-child::before {
+  content: "Task " counter(taskcounter) ". ";
+  font-weight: 600;
+}
+
+/* ---- Student answer widgets (client-side, serverless) ---- */
+.answer-box { margin: 0.5rem 0 1.25rem; }
+.answer-prompt {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #7a4d0f;
+  margin-bottom: 0.3rem;
+}
+.answer-field {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #E0C089;
+  border-radius: 4px;
+  background: #FFFDF8;
+  padding: 0.5rem 0.6rem;
+  font: inherit;
+  resize: vertical;
+}
+.answer-field:focus {
+  outline: none;
+  border-color: #BA7517;
+  box-shadow: 0 0 0 2px rgba(186, 117, 23, 0.2);
+}
+
+/* Floating submit/export panel (only shown on pages that have answer fields) */
+.answers-panel {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 1050;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #fff;
+  border: 1px solid #BA7517;
+  border-radius: 6px;
+  padding: 0.4rem 0.6rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  font-size: 0.85rem;
+}
+.answers-panel-label { font-weight: 600; color: #7a4d0f; margin-right: 0.2rem; }
+.answers-btn {
+  border: 1px solid #BA7517;
+  background: #FAEEDA;
+  color: #7a4d0f;
+  border-radius: 4px;
+  padding: 0.25rem 0.55rem;
+  cursor: pointer;
+  font: inherit;
+}
+.answers-btn:hover { background: #f3ddb5; }
+.answers-status { color: #2e7d32; min-width: 6ch; }
+
+/* all formats */
+.print-only { display: none; }
+
+@media print {
+  .no-print { display: none; }
+  .print-only { display: block; }
+  .answers-panel { display: none !important; }
+}

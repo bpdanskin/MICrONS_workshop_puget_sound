@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Bethanny Danskin">
+
+<title>Module 2 · Connectivity, Cell Types &amp; Dash Apps – MICrONS Workshop</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./resources/ai_logos/AI_lens_blue.svg" rel="icon" type="image/svg+xml">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-172ba59bd5e0b52282274ba0c0cc16fc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/kbd/kbd.js"></script>
+<link href="site_libs/quarto-contrib/kbd/kbd.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./resources/ai_logos/AI_lens_blue.svg" alt="Allen Institute" class="navbar-logo light-content">
+    <img src="./resources/ai_logos/AI_lens_blue.svg" alt="Allen Institute" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">MICrONS Workshop</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./module-1.html"> 
+<span class="menu-text">1 · Navigation &amp; Organelles</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./module-2.html" aria-current="page"> 
+<span class="menu-text">2 · Connectivity &amp; Dash Apps</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./module-3.html"> 
+<span class="menu-text">3 · Coding</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./setup.html"> 
+<span class="menu-text">Setup &amp; FAQ</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-github"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/bpdanskin/MICrONS_workshop_puget_sound/issues/new" target="_blank">
+            Report Issue
+            </a>
+          </li>
+      </ul>
+    </div>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#learning-goals" id="toc-learning-goals" class="nav-link" data-scroll-target="#learning-goals">Learning goals</a></li>
+  <li><a href="#part-1.1-dendritic-spines-and-synapse-location" id="toc-part-1.1-dendritic-spines-and-synapse-location" class="nav-link" data-scroll-target="#part-1.1-dendritic-spines-and-synapse-location">Part 1.1 · Dendritic spines and synapse location</a>
+  <ul class="collapse">
+  <li><a href="#spine-morphology" id="toc-spine-morphology" class="nav-link" data-scroll-target="#spine-morphology">Spine morphology</a></li>
+  <li><a href="#excitatory-vs.-inhibitory" id="toc-excitatory-vs.-inhibitory" class="nav-link" data-scroll-target="#excitatory-vs.-inhibitory">Excitatory vs.&nbsp;inhibitory</a></li>
+  <li><a href="#spine-shaft-and-somatic-synapses" id="toc-spine-shaft-and-somatic-synapses" class="nav-link" data-scroll-target="#spine-shaft-and-somatic-synapses">Spine, shaft, and somatic synapses</a></li>
+  </ul></li>
+  <li><a href="#part-1.2-cell-types-with-the-table-viewer" id="toc-part-1.2-cell-types-with-the-table-viewer" class="nav-link" data-scroll-target="#part-1.2-cell-types-with-the-table-viewer">Part 1.2 · Cell types with the Table Viewer</a>
+  <ul class="collapse">
+  <li><a href="#basket-vs.-chandelier-cells" id="toc-basket-vs.-chandelier-cells" class="nav-link" data-scroll-target="#basket-vs.-chandelier-cells">Basket vs.&nbsp;Chandelier cells</a></li>
+  </ul></li>
+  <li><a href="#part-1.3-connectivity-viewer-for-basket-and-chandlier-outputs" id="toc-part-1.3-connectivity-viewer-for-basket-and-chandlier-outputs" class="nav-link" data-scroll-target="#part-1.3-connectivity-viewer-for-basket-and-chandlier-outputs">Part 1.3 · Connectivity Viewer for Basket and Chandlier outputs</a>
+  <ul class="collapse">
+  <li><a href="#scientific-insight-build-a-3d-visualization-of-chandelier-cell-connectivity" id="toc-scientific-insight-build-a-3d-visualization-of-chandelier-cell-connectivity" class="nav-link" data-scroll-target="#scientific-insight-build-a-3d-visualization-of-chandelier-cell-connectivity">Scientific Insight · Build a 3D visualization of Chandelier-cell connectivity</a></li>
+  </ul></li>
+  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources">Additional resources</a></li>
+  <li><a href="#works-cited" id="toc-works-cited" class="nav-link" data-scroll-target="#works-cited">Works cited</a></li>
+  </ul>
+<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://github.com/bpdanskin/MICrONS_workshop_puget_sound/issues/new" target="_blank"><i class="bi bi-bug"></i>Report Issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Module 2 · Connectivity, Cell Types &amp; Dash Apps</h1>
+<p class="subtitle lead">MICrONS one-day workshop</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Bethanny Danskin </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://spelunker.cave-explorer.org/#!gs://microns-static-links/mm3/education/module-3-spines-cover.json"><img src="resources/module_3_spines_cover.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
+</figure>
+</div>
+<figcaption>Click the image to open the cells in Neuroglancer.</figcaption>
+</figure>
+</div>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>This module moves from single cells to circuits. You will classify <strong>dendritic spines</strong> and synapse locations on a pyramidal neuron, distinguish excitatory from inhibitory inputs, and then use the MICrONS <strong>Dash Apps</strong> to query neurons by cell type and connectivity across the whole dataset. The capstone is a 3D model of chandelier-cell connectivity.</p>
+<p>Then you will build some scientific insight on what makes a Chandelier cell unique from other cells.</p>
+</section>
+<section id="learning-goals" class="level2">
+<h2 class="anchored" data-anchor-id="learning-goals">Learning goals</h2>
+<ul>
+<li>Identify and classify dendritic spine morphologies, and locate spine, shaft, and somatic synapses.</li>
+<li>Distinguish excitatory from inhibitory synapses and reason about their influence on firing.</li>
+<li>Use the <strong>Table Viewer</strong> and <strong>Connectivity Viewer</strong> Dash Apps to search neurons by type and connectivity.</li>
+<li>Compare Basket and Chandelier cells and build a 3D connectivity render.</li>
+</ul>
+</section>
+<section id="part-1.1-dendritic-spines-and-synapse-location" class="level2">
+<h2 class="anchored" data-anchor-id="part-1.1-dendritic-spines-and-synapse-location">Part 1.1 · Dendritic spines and synapse location</h2>
+<p>Open the spine walkthrough link:</p>
+<blockquote class="blockquote">
+<p><a href="https://spelunker.cave-explorer.org/#!gs://microns-static-links/mm3/education/module-3-spine-walkthrough.json" class="uri">https://spelunker.cave-explorer.org/#!gs://microns-static-links/mm3/education/module-3-spine-walkthrough.json</a></p>
+</blockquote>
+<p>The view opens on a pyramidal neuron (green): the left panel is EM, the middle is its 3D reconstruction. Navigation controls are the same as Module 1:</p>
+<ul>
+<li>(<kbd title="Left-Click" aria-hidden="true">Left-Click</kbd><span class="visually-hidden">Left-Click</span> rotate</li>
+<li><kbd title="Shift+Left-Click" aria-hidden="true">Shift+Left-Click</kbd><span class="visually-hidden">Shift+Left-Click</span> pan</li>
+<li><kbd title="Ctrl" aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span>+<kbd title="scroll-wheel" aria-hidden="true">scroll-wheel</kbd><span class="visually-hidden">scroll-wheel</span> zoom).</li>
+</ul>
+<p>In addition, you can:</p>
+<ul>
+<li><kbd title="Right-Click" aria-hidden="true">Right-Click</kbd><span class="visually-hidden">Right-Click</span> on an annotation in the 3D or 2D panel to center it</li>
+<li><kbd title="Ctrl+Right-Click" aria-hidden="true">Ctrl+Right-Click</kbd><span class="visually-hidden">Ctrl+Right-Click</span> on an annotation to open the Details submenu on the right, which tells you more about the type of synapse and its partners</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Low-resolution mesh
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you are zoomed out you will notice the mesh is very blocky and it is hard to tell synapses apart. As you zoom in the higher resolution will load. If you have zoomed in a lot and the mesh is still blocky, grab the instructor or TA to help you increase the resolution. The higher resolution has a performance trade-off, is slower to load, and is turned down by default.</p>
+</div>
+</div>
+<section id="spine-morphology" class="level3">
+<h3 class="anchored" data-anchor-id="spine-morphology">Spine morphology</h3>
+<p>Zoom into the dendrites and you will see small protrusions — <strong>dendritic spines</strong>, the primary postsynaptic sites of excitatory transmission. They are classified by shape into mushroom, thin, stubby, and filopodial types:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="resources/synapse_shapes_pchitskaya.jpeg" class="img-fluid figure-img"></p>
+<figcaption>Four morphological types of dendritic spines. Adapted from <span class="citation" data-cites="Pchitskaya_2020">(<a href="#ref-Pchitskaya_2020" role="doc-biblioref">Pchitskaya and Bezprozvanny 2020</a>)</span>.</figcaption>
+</figure>
+</div>
+<div class="task">
+<p>Zoom into the 3D panel and find a spine resembling each of the four types (mushroom, thin, stubby, filopodial). Note below how confident you were in each call and what shape features you used.</p>
+</div>
+<div class="answer-box"><label class="answer-prompt" for="af-m2-spines">Your spine classifications — how clear/ambiguous was each, and what features you used</label><textarea id="af-m2-spines" class="answer-field" data-answer-id="m2-spines" rows="4" placeholder="Type your response here…"></textarea></div>
+</section>
+<section id="excitatory-vs.-inhibitory" class="level3">
+<h3 class="anchored" data-anchor-id="excitatory-vs.-inhibitory">Excitatory vs.&nbsp;inhibitory</h3>
+<p><strong>Excitatory synapses</strong> increase action potential firing probability (often via Na⁺/Ca²⁺ influx).</p>
+<p><strong>Inhibitory synapses</strong> lower it (via Cl⁻ influx or K⁺ efflux).</p>
+<p>In vertebrates the dominant excitatory transmitter is glutamate; the dominant inhibitory transmitters are GABA and glycine.</p>
+<div class="task">
+<p>What neurotransmitter does this excitatory pyramidal neuron most likely release from its axon terminals?</p>
+</div>
+<div class="answer-box"><label class="answer-prompt" for="af-m2-transmitter">Neurotransmitter released by this pyramidal cell</label><textarea id="af-m2-transmitter" class="answer-field" data-answer-id="m2-transmitter" rows="1" placeholder="Type your response here…"></textarea></div>
+<div class="task">
+<p>What neurotransmitter does this excitatory pyramidal neuron most likely recieve at synapses on its dendrites?</p>
+</div>
+<div class="answer-box"><label class="answer-prompt" for="af-m2-transmitter">Neurotransmitter recieved by this pyramidal cell</label><textarea id="af-m2-transmitter" class="answer-field" data-answer-id="m2-transmitter" rows="1" placeholder="Type your response here…"></textarea></div>
+</section>
+<section id="spine-shaft-and-somatic-synapses" class="level3">
+<h3 class="anchored" data-anchor-id="spine-shaft-and-somatic-synapses">Spine, shaft, and somatic synapses</h3>
+<p>Only <strong>dendrites</strong> carry spines. Some neurons are <strong>aspiny</strong> meaning they have no spines or very few. Synapses onto a neuron occur at three compartments:</p>
+<ul>
+<li>dendritic <strong>spines</strong> (almost always excitatory, electrically compartmentalized)</li>
+<li>dendritic <strong>shafts</strong> (excitatory or inhibitory)</li>
+<li>the <strong>soma</strong> (often inhibitory, and powerful because it sits closest to the axon hillock).</li>
+</ul>
+<p>The information (electric potentials) recieved at each synapse are summed together. If the integrated inputs reach the activation threshold at the <strong>axon hillock</strong>, an <strong>action potential</strong> is generated and sent down the axon.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="resources/spine_shaft_bucher.png" class="img-fluid figure-img"></p>
+<figcaption>A spine synapse (left) and a shaft synapse (right). Adapted from <span class="citation" data-cites="Bucher_2019">(<a href="#ref-Bucher_2019" role="doc-biblioref">Bucher et al. 2020</a>)</span>.</figcaption>
+</figure>
+</div>
+<p>Activate the postsynaptic prediction layer (click the struck-through layer tab). Dots mark synaptic inputs onto this neuron: spine synapses are purple, shaft yellow, somatic cyan.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="resources/module_3_neuroglancer_4.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<div class="task">
+<p>Locate the <strong>axon hillock</strong>.</p>
+</div>
+<div class="answer-box"><label class="answer-prompt" for="af-m2-hillock">How did you find the axon hillock? (hint: what is NOT there?)</label><textarea id="af-m2-hillock" class="answer-field" data-answer-id="m2-hillock" rows="2" placeholder="Type your response here…"></textarea></div>
+<p>Consider these four hypothetical synapse sites:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="resources/spine_shaft_soma.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<div class="task">
+<p>Which site (1–4) is closest to the axon hillock?.</p>
+</div>
+<div class="answer-box"><label class="answer-prompt" for="af-m2-integration">Which synapse? (number)</label><textarea id="af-m2-integration" class="answer-field" data-answer-id="m2-integration" rows="1" placeholder="Type your response here…"></textarea></div>
+<div class="task">
+<p>Assume shaft synapses 2 and 3 are inhibitory: would they inhibit the neuron equally, or would one be stronger? Explain.</p>
+</div>
+<div class="answer-box"><label class="answer-prompt" for="af-m2-integration">Your reasoning about synapse inhibitory strength</label><textarea id="af-m2-integration" class="answer-field" data-answer-id="m2-integration" rows="4" placeholder="Type your response here…"></textarea></div>
+</section>
+</section>
+<section id="part-1.2-cell-types-with-the-table-viewer" class="level2">
+<h2 class="anchored" data-anchor-id="part-1.2-cell-types-with-the-table-viewer">Part 1.2 · Cell types with the Table Viewer</h2>
+<p>The whole dataset can be queried with <strong>Dash Apps</strong>. The <strong>Table Viewer</strong> produces a sortable list of cells by predicted type and metadata. Open it:</p>
+<blockquote class="blockquote">
+<p><a href="https://minnie.microns-daf.com/dash/datastack/minnie65_public/apps/table_viewer/?datastack=%22minnie65_public%22" class="uri">https://minnie.microns-daf.com/dash/datastack/minnie65_public/apps/table_viewer/?datastack=%22minnie65_public%22</a></p>
+</blockquote>
+<p><img src="resources/module_4_dash_ui_1.png" class="img-fluid"></p>
+<p>Select <code>aibs_metamodel_celltypes_v661</code> in the <strong>Annotation Table</strong> box and click <strong>Submit</strong>. You get a table of Root IDs with a predicted <code>cell_type</code> and <code>classification_system</code> for each — cell types predicted from perisomatic EM features by a machine-learning model <span class="citation" data-cites="elabbady_perisomatic_2025">(<a href="#ref-elabbady_perisomatic_2025" role="doc-biblioref">Elabbady et al. 2025</a>)</span>. Click a column header to sort.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Cell-type abbreviations you may see
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pyramidal cells are named by layer + “P” (e.g.&nbsp;<code>23P</code>, <code>4P</code>, <code>5P-IT</code>). Inhibitory interneurons include Basket (BC), Bipolar (BPC), Martinotti (MC), Neurogliaform (NGC). Non-neuronal: astrocytes, microglia, oligodendrocytes.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>About dataset versions and the yellow version warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The Materialization dropdown defaults to <strong>“Latest”</strong>; the module scenes use <strong>v1300</strong>. To get the best match between versions, select Materialization <strong>v1300</strong>.</p>
+<p>A yellow banner when you hit submit just means the app substituted the valid Root ID for the version you queried — that is expected. See the <a href="./setup.html">Setup &amp; FAQ</a>.</p>
+</div>
+</div>
+<p>Now open a Neuroglancer window that accepts pasted Root IDs:</p>
+<blockquote class="blockquote">
+<p><a href="https://spelunker.cave-explorer.org/#!gs://microns-static-links/mm3/education/module-4-cells-from-table.json" class="uri">https://spelunker.cave-explorer.org/#!gs://microns-static-links/mm3/education/module-4-cells-from-table.json</a></p>
+</blockquote>
+<p>Copy a Root ID from the Table Viewer (<kbd title="left-click" aria-hidden="true">left-click</kbd><span class="visually-hidden">left-click</span> the cell, then <kbd title="Ctrl+C" aria-hidden="true">Ctrl+C</kbd><span class="visually-hidden">Ctrl+C</span>) and paste it into the “Enter ID…” box in Neuroglancer, then click the eye icon to show it.</p>
+<p><img src="resources/module_4_neuroglancer_ui_1.png" class="img-fluid"></p>
+<div class="task">
+<p>Pick <strong>five Root IDs of different cell types</strong>, view each in Neuroglancer, and record the Root ID, cell type, and a short morphology note (branching, size, spines, synapse distribution). “Share” your state with all 5 roots and add it to your answer below. <em>If a mesh or synapses fail to load</em>, just choose a different Root ID.</p>
+</div>
+<div class="answer-box"><label class="answer-prompt" for="af-m2-celltypes">Your five cells — Root ID, cell type, and morphology notes</label><textarea id="af-m2-celltypes" class="answer-field" data-answer-id="m2-celltypes" rows="8" placeholder="Type your response here…"></textarea></div>
+<section id="basket-vs.-chandelier-cells" class="level3">
+<h3 class="anchored" data-anchor-id="basket-vs.-chandelier-cells">Basket vs.&nbsp;Chandelier cells</h3>
+<p>Basket and Chandelier cells are both <strong>GABAergic interneurons</strong> with dense axon arbors that target near the soma of pyramidal cells. But they differ in one meaningul way. Let’s find out how!</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="resources/basket_and_chandelier_fino.png" class="img-fluid figure-img"></p>
+<figcaption>Basket and Chandelier cell targeting. Adapted from <span class="citation" data-cites="Fino_2013">(<a href="#ref-Fino_2013" role="doc-biblioref">Fino et al. 2013</a>)</span>.</figcaption>
+</figure>
+</div>
+<p>Open the scene with example cells (Root IDs ending 504, 411, 618, 745 are Basket cells; 294, 364, 598 are Chandelier cells, hidden by default — click their eye icons):</p>
+<blockquote class="blockquote">
+<p><a href="https://spelunker.cave-explorer.org/#!gs://microns-static-links/mm3/education/module-4-basket-chandelier.json" class="uri">https://spelunker.cave-explorer.org/#!gs://microns-static-links/mm3/education/module-4-basket-chandelier.json</a></p>
+</blockquote>
+<div class="task">
+<p>Compare Basket and Chandelier cell morphology. What differences can you find? What is similar?</p>
+</div>
+<div class="answer-box"><label class="answer-prompt" for="af-m2-bc-chc-morph">Morphological differences and similarities between Basket and Chandelier cells</label><textarea id="af-m2-bc-chc-morph" class="answer-field" data-answer-id="m2-bc-chc-morph" rows="4" placeholder="Type your response here…"></textarea></div>
+</section>
+</section>
+<section id="part-1.3-connectivity-viewer-for-basket-and-chandlier-outputs" class="level2">
+<h2 class="anchored" data-anchor-id="part-1.3-connectivity-viewer-for-basket-and-chandlier-outputs">Part 1.3 · Connectivity Viewer for Basket and Chandlier outputs</h2>
+<p>The <strong>Connectivity Viewer</strong> takes a Root ID and returns every neuron it is synaptically connected to, plus summary plots. Open it:</p>
+<blockquote class="blockquote">
+<p><a href="https://minnie.microns-daf.com/dash/datastack/minnie65_public/apps/connectivity/?datastack=%22minnie65_public%22" class="uri">https://minnie.microns-daf.com/dash/datastack/minnie65_public/apps/connectivity/?datastack=%22minnie65_public%22</a></p>
+</blockquote>
+<p><img src="resources/module_4_dash_ui_2.png" class="img-fluid"></p>
+<p>Paste Root ID <code>864691136107670745</code> (a basket cell) into <strong>Cell ID</strong>, then select <code>aibs_metamodel_celltypes_v661</code> in the Table box, and Submit.</p>
+<p>Then open the <strong>Plots</strong> tab and set <strong>Color By Value</strong> to <code>cell_type</code>. The plots show input/output by cortical depth, each output synapse by depth vs.&nbsp;target soma depth, and the count of target cells by type.</p>
+<p><img src="resources/module_4_dash_ui_3.png" class="img-fluid"></p>
+<p>Query any one of these Basket and any one of these Chandelier cells and compare their Plots tabs:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Basket cells</th>
+<th>Chandelier cells</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>864691135101289504</code></td>
+<td><code>864691135293114294</code></td>
+</tr>
+<tr class="even">
+<td><code>864691135640484411</code></td>
+<td><code>864691135583296365</code></td>
+</tr>
+<tr class="odd">
+<td><code>864691135996104618</code></td>
+<td><code>864691137054708598</code></td>
+</tr>
+</tbody>
+</table>
+<div class="task">
+<p>Describe how Basket and Chandelier cell connectivity differs — look at input/output synapse positions, the relationship between synapse depth and target soma depth, and the types of cells receiving output.</p>
+</div>
+<div class="answer-box"><label class="answer-prompt" for="af-m2-connectivity">Connectivity differences between Basket and Chandelier cells</label><textarea id="af-m2-connectivity" class="answer-field" data-answer-id="m2-connectivity" rows="5" placeholder="Type your response here…"></textarea></div>
+<section id="scientific-insight-build-a-3d-visualization-of-chandelier-cell-connectivity" class="level3">
+<h3 class="anchored" data-anchor-id="scientific-insight-build-a-3d-visualization-of-chandelier-cell-connectivity">Scientific Insight · Build a 3D visualization of Chandelier-cell connectivity</h3>
+<div class="task">
+<p>Create a 3D render illustrating a Chandelier cell’s connectivity:</p>
+<ol type="1">
+<li>Open a fresh Neuroglancer window and a fresh Connectivity Viewer.</li>
+<li>Choose a Chandelier cell Root ID from the table above; show it in Neuroglancer.</li>
+<li>Query the same Root ID in the Connectivity Viewer (Table = <code>aibs_metamodel_celltypes_v661</code>).</li>
+<li>Pick <strong>top three pyramidal cells</strong> that receive output from it, and add all three to Neuroglancer.</li>
+<li>Provide the three items below.</li>
+</ol>
+</div>
+<div class="answer-box"><label class="answer-prompt" for="af-m2-chandelier-outputs">What do you see about the chandelier's outputs? Add your Neuroglancer Share URL (Chandelier + 3 pyramidal cells)</label><textarea id="af-m2-chandelier-outputs" class="answer-field" data-answer-id="m2-chandelier-outputs" rows="2" placeholder="Type your response here…"></textarea></div>
+<p>Bonus: try ticking the checkboxes for the top 3 pyramidal cells in the connectivity viewer, then clicking the blue “Neuroglancer: (3 partners)” button.</p>
+</section>
+</section>
+<section id="additional-resources" class="level2">
+<h2 class="anchored" data-anchor-id="additional-resources">Additional resources</h2>
+<p>Explore the dataset further at <a href="https://www.microns-explorer.org/cortical-mm3">MICrONS-Explorer.org</a>.</p>
+</section>
+<section id="works-cited" class="level2">
+
+
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Works cited</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-Bucher_2019" class="csl-entry" role="listitem">
+Bucher, Michael, Tomas Fanutza, and Marina Mikhaylova. 2020. <span>“Cytoskeletal Makeup of the Synapse: Shaft Versus Spine.”</span> <em>Cytoskeleton</em> 77 (3-4): 55–64. https://doi.org/<a href="https://doi.org/10.1002/cm.21583">https://doi.org/10.1002/cm.21583</a>.
+</div>
+<div id="ref-elabbady_perisomatic_2025" class="csl-entry" role="listitem">
+Elabbady, Leila, Sharmishtaa Seshamani, Shang Mu, et al. 2025. <span>“Perisomatic Ultrastructure Efficiently Classifies Cells in Mouse Cortex.”</span> <em>Nature</em> 640 (8058): 478–86. <a href="https://doi.org/10.1038/s41586-024-07765-7">https://doi.org/10.1038/s41586-024-07765-7</a>.
+</div>
+<div id="ref-Fino_2013" class="csl-entry" role="listitem">
+Fino, Elodie, Adam M. Packer, and Rafael Yuste. 2013. <span>“The Logic of Inhibitory Connectivity in the Neocortex.”</span> <em>The Neuroscientist</em> 19 (3): 228–37. <a href="https://doi.org/10.1177/1073858412456743">https://doi.org/10.1177/1073858412456743</a>.
+</div>
+<div id="ref-Pchitskaya_2020" class="csl-entry" role="listitem">
+Pchitskaya, Ekaterina, and Ilya Bezprozvanny. 2020. <span>“Dendritic Spines Shape Analysis—Classification or Clusterization? Perspective.”</span> <em>Frontiers in Synaptic Neuroscience</em> Volume 12 - 2020. <a href="https://doi.org/10.3389/fnsyn.2020.00031">https://doi.org/10.3389/fnsyn.2020.00031</a>.
+</div>
+</div></section></div></main> <!-- /main -->
+<!-- Floating export panel for client-side student answers.
+     Included site-wide via include-after-body. Only appears on pages
+     that contain .answer-field widgets. Nothing leaves the browser. -->
+<div id="answers-panel" class="answers-panel no-print" hidden="">
+  <span class="answers-panel-label">My answers</span>
+  <button type="button" id="answers-download" class="answers-btn">⬇ Download all</button>
+  <button type="button" id="answers-copy" class="answers-btn">⧉ Copy this page</button>
+  <span id="answers-status" class="answers-status" aria-live="polite"></span>
+</div>
+<script>
+(function () {
+  "use strict";
+  var PREFIX = "micronsws:";
+  var pageKey = location.pathname;
+  var pageTitle = (document.title || pageKey)
+    .replace(/\s*[–—-]\s*MICrONS.*$/i, "").trim() || pageKey;
+
+  function lsGet(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+  function lsSet(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+  function keyFor(id) { return PREFIX + pageKey + "::" + id; }
+
+  var fields = Array.prototype.slice.call(document.querySelectorAll(".answer-field"));
+  var panel = document.getElementById("answers-panel");
+  if (!fields.length) { return; }          // no widgets on this page -> panel stays hidden
+  if (panel) { panel.hidden = false; }
+
+  // restore saved values + wire autosave
+  fields.forEach(function (el) {
+    var id = el.getAttribute("data-answer-id");
+    var promptEl = el.previousElementSibling;
+    var prompt = promptEl ? promptEl.textContent.trim() : id;
+    var raw = lsGet(keyFor(id));
+    if (raw) {
+      try { var o = JSON.parse(raw); if (o && typeof o.v === "string") { el.value = o.v; } }
+      catch (e) { el.value = raw; }
+    }
+    el.addEventListener("input", function () {
+      lsSet(keyFor(id), JSON.stringify({ v: el.value, p: prompt, page: pageKey, title: pageTitle }));
+    });
+  });
+
+  function collectAll() {
+    var byPage = {};
+    try {
+      for (var i = 0; i < localStorage.length; i++) {
+        var k = localStorage.key(i);
+        if (k.indexOf(PREFIX) !== 0) { continue; }
+        var o; try { o = JSON.parse(localStorage.getItem(k)); } catch (e) { continue; }
+        if (!o || !o.v || !o.v.trim()) { continue; }
+        var pg = o.title || o.page || "Answers";
+        (byPage[pg] = byPage[pg] || []).push(o);
+      }
+    } catch (e) {}
+    return byPage;
+  }
+
+  function toMarkdown(byPage) {
+    var out = ["# MICrONS Workshop — my answers", "",
+               "_Exported " + new Date().toLocaleString() + "_", ""];
+    var pages = Object.keys(byPage);
+    if (!pages.length) { return out.join("\n") + "\n\n(No answers recorded yet.)\n"; }
+    pages.forEach(function (pg) {
+      out.push("## " + pg, "");
+      byPage[pg].forEach(function (o) { out.push("**" + (o.p || "Response") + "**", "", o.v, ""); });
+    });
+    return out.join("\n") + "\n";
+  }
+
+  function download(text) {
+    var blob = new Blob([text], { type: "text/markdown;charset=utf-8" });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement("a");
+    a.href = url;
+    a.download = "microns-workshop-answers-" + new Date().toISOString().slice(0, 10) + ".md";
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+  }
+
+  function flash(msg) {
+    var s = document.getElementById("answers-status");
+    if (!s) { return; }
+    s.textContent = msg;
+    setTimeout(function () { s.textContent = ""; }, 2500);
+  }
+
+  var dl = document.getElementById("answers-download");
+  if (dl) { dl.addEventListener("click", function () { download(toMarkdown(collectAll())); flash("Downloaded ✓"); }); }
+
+  var cp = document.getElementById("answers-copy");
+  if (cp) {
+    cp.addEventListener("click", function () {
+      var one = {}; one[pageTitle] = [];
+      fields.forEach(function (el) {
+        var promptEl = el.previousElementSibling;
+        one[pageTitle].push({ p: promptEl ? promptEl.textContent.trim() : el.getAttribute("data-answer-id"), v: el.value });
+      });
+      var text = toMarkdown(one);
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(
+          function () { flash("Copied this page ✓"); },
+          function () { flash("Copy failed — use Download"); });
+      } else { flash("Copy unsupported — use Download"); }
+    });
+  }
+})();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
