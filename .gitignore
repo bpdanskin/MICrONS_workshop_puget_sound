@@ -5,3 +5,4 @@
 .venv/
 __pycache__/
 /docs/notebooks/.jupyter_cache
+docs/notebooks/.jupyter_cache/global.db
