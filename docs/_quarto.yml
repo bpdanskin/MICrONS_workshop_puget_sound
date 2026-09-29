@@ -1,0 +1,40 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - "*.qmd"
+    - "notebooks/*.ipynb"
+    - "!notebooks/caveclient_setup_colab.ipynb"
+
+website:
+  title: "MICrONS Workshop"
+  favicon: resources/ai_logos/AI_lens_blue.svg
+  navbar:
+    logo: resources/ai_logos/AI_lens_blue.svg
+    logo-alt: "Allen Institute"
+    left:
+      - href: index.qmd
+        text: Home
+      - href: module-1.qmd
+        text: "1 · Navigation & Organelles"
+      - href: module-2.qmd
+        text: "2 · Connectivity & Dash Apps"
+      - href: module-3.qmd
+        text: "3 · Coding"
+      - href: setup.qmd
+        text: Setup & FAQ
+    tools:
+      - icon: github
+        menu:
+          - text: Report Issue
+            href: https://github.com/bpdanskin/MICrONS_workshop_puget_sound/issues/new
+            target: _blank
+  back-to-top-navigation: true
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    link-external-newwindow: true
+    include-after-body: resources/answers-widget.html

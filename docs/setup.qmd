@@ -1,0 +1,109 @@
+---
+title: "Setup & FAQ"
+format:
+  html: default
+---
+
+Everything you need before and during the workshop. Do the **Before you start** items ahead of time so the day runs smoothly. The rest is troubleshooting — click any question to expand it.
+
+## Before you start
+
+1. **Use Chrome or Firefox.** Avoid Safari — it often fails to render Neuroglancer or to copy Root IDs.
+2. **Have a Google account ready.** Viewing the data requires a Google (or Google-enabled) login.
+3. **Accept the MICrONS Terms of Service once** (per account):
+
+   > <https://global.daf-apis.com/sticky_auth/api/v1/tos/2/accept>
+
+4. **For the coding module (Module 3):** set up a CAVE token ahead of time — see [Coding setup](#coding) below.
+
+## Viewing the data (Modules 1 & 2)
+
+::: {#login .callout-note collapse="true"}
+## I'm asked to log in — what do I do?
+When you open a Neuroglancer scene or a Dash App, click **"Request Login"** and sign in with **any Google account**. Then accept the Terms of Service (once per account):
+
+> <https://global.daf-apis.com/sticky_auth/api/v1/tos/2/accept>
+
+:::
+
+::: {#render .callout-note collapse="true"}
+## The segmentation or meshes don't render
+1. Accept the Terms of Service (link above) on the Google account you logged in with.
+2. Hard-refresh the Neuroglancer window.
+3. If the right-hand segmentation panel still shows a red error, ask your instructor or TA.
+
+If only one specific cell fails to load, try a different Root ID — see [Root IDs](#root-ids).
+:::
+
+::: {#versions .callout-note collapse="true"}
+## What is a dataset "version" (materialization)?
+The MICrONS reconstruction is continuously proofread, so it changes over time. To stay reproducible, it is periodically frozen into numbered **materialization versions** that fix the segmentation, Root IDs, and tables at one moment. The Module 1 & 2 scenes use **v1300** so everyone sees the same cells. The Dash Apps default to **"Latest"**; select **v1300** if you want results to match the scenes exactly.
+:::
+
+::: {#graphene .callout-note collapse="true"}
+## Static vs. dynamic (Graphene) segmentation
+The **static** layer used in the module scenes is a frozen v1300 snapshot — fast, unchanging, matching v1300 Root IDs. The **dynamic (Graphene)** layer reflects the latest proofreading and its Root IDs can change. **Neuroglancer links generated from the Dash Apps use the Graphene layer**, so a Root ID copied from a v1300 scene may differ from the "same" cell in a Dash-generated link. The Dash Apps handle this substitution for you — see [the yellow warning](#warning).
+:::
+
+::: {#root-ids .callout-note collapse="true"}
+## A Root ID doesn't appear, or has no mesh/synapses
+Proofreading edits create new Root IDs over time, so a Root ID valid in one version may not be valid in another — showing up as a missing mesh or missing synapses. Either try a different Root ID, or make sure the version you're viewing matches where the Root ID came from. This is normal, not a mistake on your part.
+:::
+
+::: {#warning .callout-note collapse="true"}
+## What is the yellow warning in the Dash Apps?
+If you enter a Root ID that isn't valid at the selected **Materialization** version, the app automatically finds the most-overlapping valid Root ID and shows that cell's data with a **yellow banner**. This is expected — you don't need to do anything. To make results match the module scenes, set the Materialization dropdown to **v1300**.
+:::
+
+## Coding setup (Module 3) {#coding}
+
+The coding module runs in **Google Colab** — no local install needed. You do need a free **CAVE token** (tied to a Google account) to query the data.
+
+::: {.callout-tip}
+## Recommended: set your token once in Colab
+Open the [token-setup notebook](https://colab.research.google.com/github/bpdanskin/MICrONS_workshop_puget_sound/blob/main/docs/notebooks/caveclient_setup_colab.ipynb) and follow it. It stores your token as a Colab **Secret** named `CAVE_TOKEN`, so afterwards you can connect with:
+
+```python
+from google.colab import userdata
+from caveclient import CAVEclient
+client = CAVEclient('minnie65_public', auth_token=userdata.get('CAVE_TOKEN'))
+```
+:::
+
+::: {#token .callout-note collapse="true"}
+## Creating a CAVE token by hand
+1. Accept the Terms of Service: <https://global.daf-apis.com/sticky_auth/api/v1/tos/2/accept>
+2. View existing tokens: <https://global.daf-apis.com/auth/api/v1/user/token>
+3. Create a new one (if you have none): <https://global.daf-apis.com/auth/api/v1/create_token>
+
+Then in the notebook:
+```python
+from caveclient import CAVEclient
+client = CAVEclient("minnie65_public", auth_token="YOUR_TOKEN_HERE")
+```
+A `401` error means the token is missing/invalid or the Terms of Service haven't been accepted.
+:::
+
+::: {#local .callout-note collapse="true"}
+## Running locally instead of Colab
+Clone the repo and use [uv](https://docs.astral.sh/uv/):
+```bash
+git clone https://github.com/bpdanskin/MICrONS_workshop_puget_sound.git
+cd MICrONS_workshop_puget_sound
+uv sync
+uv run jupyter lab
+```
+Save your token once so you don't have to paste it again:
+```python
+client.auth.save_token(token="YOUR_TOKEN_HERE", overwrite=True)
+# thereafter: client = CAVEclient("minnie65_public")
+```
+:::
+
+## Saving your answers
+
+Modules have fill-in **answer boxes**. What you type saves automatically in *your* browser (nothing is sent anywhere). Use the floating **Download all** button (bottom-right of any module page) to export every answer as one file to submit. Answers persist per browser — use the same browser and device throughout, and note that a private/incognito window may not retain them.
+
+## Still stuck?
+
+Contact your instructor or TA, or [report an issue](https://github.com/bpdanskin/MICrONS_workshop_puget_sound/issues/new).

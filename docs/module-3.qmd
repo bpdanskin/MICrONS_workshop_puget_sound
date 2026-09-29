@@ -1,0 +1,69 @@
+---
+title: "Module 3 · Introduction to Coding"
+subtitle: "MICrONS one-day workshop"
+author: Bethanny Danskin
+format:
+  html:
+    toc: true
+other-links:
+  - text: Report Issue
+    href: https://github.com/bpdanskin/MICrONS_workshop_puget_sound/issues/new
+    target: _blank
+    icon: bug
+---
+
+## Overview
+
+In the first two modules you explored the MICrONS reconstruction through the browser. In this module you access the **same data programmatically** with Python and **CAVEclient**, the client for the Connectome Annotation Versioning Engine (CAVE). Querying the cloud lets you analyze thousands of cells and their connections without downloading the raw volume.
+
+The notebook builds towards a **cell-type-sorted connectivity matrix** — a heatmap of who connects to whom across a cortical column.
+
+## Learning goals
+
+* Connect to CAVE and load a neuron's morphology (skeleton) and its synapses.
+* Query cell-type tables and plot the spatial organization of cortical cell types.
+* Build a **binary** connectivity matrix and sort it by cell type into an interpretable heatmap.
+
+## Run the notebook
+
+The notebook runs in **Google Colab** — nothing to install locally. Open it, then choose *File → Save a copy in Drive* to keep your own working copy.
+
+::::{.grid}
+
+:::{.g-col-6}
+<center> **Run in Google Colab** </center>
+
+<center> [![](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bpdanskin/MICrONS_workshop_puget_sound/blob/main/docs/notebooks/microns_data_access_education.ipynb) </center>
+
+<center> Runs in the browser. Recommended for the workshop. </center>
+:::
+
+:::{.g-col-6}
+<center> **View / download the notebook** </center>
+
+<center> [Notebook (rendered)](notebooks/microns_data_access_education.ipynb) </center>
+
+<center> Read the rendered version, or download the `.ipynb` to run locally (see [Setup & FAQ](setup.qmd)). </center>
+:::
+
+::::
+
+::: {.callout-important}
+## One-time account setup
+Running code against CAVE needs a **free CAVE token** tied to a Google account, plus a one-time Terms-of-Service acceptance. Do this **before** the workshop — see [Setup & FAQ](setup.qmd#coding). The [token-setup notebook](https://colab.research.google.com/github/bpdanskin/MICrONS_workshop_puget_sound/blob/main/docs/notebooks/caveclient_setup_colab.ipynb) stores your token in Colab so you only enter it once.
+:::
+
+## What you'll do
+
+1. **Connect** to CAVE and confirm your token works.
+2. **Part 1 · Morphology** — load one neuron as a skeleton, add its input and output synapses, and see which compartments (spine / shaft / soma) its synapses target.
+3. **Part 2 · Connectivity** — load all proofread-to-proofread connections in a cortical column and build a connectivity matrix (also called an *edge list*).
+4. **Part 3 · Cell types** — query the cell-type table and plot cell volume vs. cortical depth, colored by type.
+5. **Part 4 · The payoff** — sort the connectivity matrix by cell type into a heatmap that reveals circuit structure.
+6. **Bonus** — how weighting connections by synapse **size** vs. **count** changes the picture.
+
+
+## Additional resources
+
+* [MICrONS coding tutorials](https://tutorial.microns-explorer.org/)
+* [CAVEclient documentation](https://www.caveconnecto.me/CAVEclient/tutorials/)
