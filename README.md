@@ -1,8 +1,8 @@
 # MICrONS Connectomics — One-Day Workshop (Puget Sound)
 
-A lean, three-module workshop for exploring the [MICrONS](https://www.microns-explorer.org/) dataset (1 mm³ of mouse visual cortex, EM reconstruction) in a single day, for students who already have a neuroscience background.
+A three-module workshop for exploring the [MICrONS](https://www.microns-explorer.org/) dataset (1 mm³ of mouse visual cortex, EM reconstruction)
 
-It is a stripped-down adaptation of the Allen Institute **HIVE** [*Teaching Connectomics*](https://github.com/AllenInstitute/Teaching_Connectomics) curriculum (written for a multi-week course). This repo diverges completely and is not a fork.
+It is a condensed adaptation of the Allen Institute **HIVE** [*Teaching Connectomics*](https://github.com/AllenInstitute/Teaching_Connectomics) curriculum (written for a multi-week course). This repo diverges completely and is not a fork.
 
 ## Modules
 
