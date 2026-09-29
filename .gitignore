@@ -4,3 +4,4 @@
 /docs/_site/
 .venv/
 __pycache__/
+/docs/notebooks/.jupyter_cache
