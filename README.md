@@ -19,7 +19,6 @@ The tutorial will contain examples of how to access: annotations, connectivity, 
 [Functional connectomics spanning multiple areas of mouse visual cortex](https://www.nature.com/articles/s41586-025-08790-w)
 
 
-
 ## Modules
 
 1. **Neuroglancer Navigation & Organelles** — get oriented in Neuroglancer; identify nuclei, mitochondria, ER, myelin, and synapses in EM.
@@ -35,6 +34,10 @@ Further Neuroglancer navigation instructions at [MICrONS Explorer Tools](https:/
 [![](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bpdanskin/MICrONS_workshop_puget_sound/blob/main/docs/notebooks/microns_data_access_education.ipynb), or locally with `uv run jupyter lab`. 
 
 Either way needs a free CAVE token — see the **Setup & FAQ** page in the site.
+
+## See something weird? Share it!
+
+As you are exploring neuroglancer today, if you see something strange or that you don't understand, consider sharing it to our [**Notes from the Neuropil**](https://bdpedigo.github.io/nftn/) science blog. 
 
 ## Further reading relevant to the demonstration
 
