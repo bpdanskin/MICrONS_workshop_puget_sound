@@ -14,7 +14,7 @@ In this tutorial, we introduce the dataset, as well as both interactive and prog
 
 The tutorial will contain examples of how to access: annotations, connectivity, segmentation, and neuron-skeletons.
 
-[Presentation Slides]()
+[Presentation Slides](https://drive.google.com/file/d/1vaTWfDSAVFdEyEhG5fPCP3Gg7nf72GkU/view?usp=sharing)
 
 [Functional connectomics spanning multiple areas of mouse visual cortex](https://www.nature.com/articles/s41586-025-08790-w)
 
