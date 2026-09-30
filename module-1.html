@@ -173,6 +173,7 @@ div.csl-indent {
   <li><a href="#part-1.1-getting-oriented-in-neuroglancer" id="toc-part-1.1-getting-oriented-in-neuroglancer" class="nav-link" data-scroll-target="#part-1.1-getting-oriented-in-neuroglancer">Part 1.1 · Getting oriented in Neuroglancer</a>
   <ul class="collapse">
   <li><a href="#layer-tabs" id="toc-layer-tabs" class="nav-link" data-scroll-target="#layer-tabs">Layer tabs</a></li>
+  <li><a href="#imagery-brightnesscontrast" id="toc-imagery-brightnesscontrast" class="nav-link" data-scroll-target="#imagery-brightnesscontrast">Imagery brightness/contrast</a></li>
   <li><a href="#moving-in-the-3d-segmentation-panel" id="toc-moving-in-the-3d-segmentation-panel" class="nav-link" data-scroll-target="#moving-in-the-3d-segmentation-panel">Moving in the 3D (segmentation) panel</a></li>
   <li><a href="#moving-in-the-2d-em-panel" id="toc-moving-in-the-2d-em-panel" class="nav-link" data-scroll-target="#moving-in-the-2d-em-panel">Moving in the 2D (EM) panel</a></li>
   </ul></li>
@@ -297,9 +298,19 @@ div.csl-indent {
 <li><kbd title="left-click" aria-hidden="true">left-click</kbd><span class="visually-hidden">left-click</span> a layer tab to toggle it on/off (a strikethrough means it is off).</li>
 <li>Do <strong>not</strong> click the “x” or trashcan — that removes the layer entirely.</li>
 </ul>
-<div class="quarto-figure quarto-figure-right">
+</section>
+<section id="imagery-brightnesscontrast" class="level3">
+<h3 class="anchored" data-anchor-id="imagery-brightnesscontrast">Imagery brightness/contrast</h3>
+<p>You can edit the brightness and contrast of the imagery layer with the “shader tool”. You can either access this from:</p>
+<ol type="1">
+<li><kbd title="mac: Ctrl-Click, windows: Right-Click" aria-hidden="true" data-mac="Ctrl-Click" data-windows="Right-Click"></kbd><span class="visually-hidden"></span> on the <code>img</code> layer tab to open its settings in the right-hand panel.</li>
+<li>open the “Rendering” submenu</li>
+<li>scroll down to the “shader controls”</li>
+</ol>
+<p>Or, use the Palette Tool shortcut (wrench in the open menu) and select: “Shader Controls”. This opens a submenu within your view where you can adjust the brightness and contrast slider</p>
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="resources/neuroglancer_2D_UI_2_menu.png" class="img-fluid quarto-figure quarto-figure-right figure-img"></p>
+<p><img src="resources/module-1-shader-palette.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
 </section>
@@ -337,6 +348,9 @@ Caution
 <p>This data is <em>anisotropic</em> — sections are thicker than they are wide. Keep the 2D plane square-on; if it rotates accidentally, hover over the 2D panel and press <kbd title="z" aria-hidden="true">z</kbd><span class="visually-hidden">z</span> to reset. Toggle the section overlay in 3D with <kbd title="s" aria-hidden="true">s</kbd><span class="visually-hidden">s</span>.</p>
 </div>
 </div>
+<ul>
+<li>Select more segments with <kbd title="Double-Left-Click" aria-hidden="true">Double-Left-Click</kbd><span class="visually-hidden">Double-Left-Click</span> to highlight the segment in both 2D and 3D. Double click again to hide (can still be found on your righthand segment menu)</li>
+</ul>
 <p>Take a couple of minutes to rotate, pan, zoom, and step through z until the controls feel natural.</p>
 </section>
 </section>
@@ -480,111 +494,217 @@ The MICrONS Consortium, J. Alexander Bae, Mahaly Baptiste, et al. 2025. <span>�
 </div>
 </div></section></div></main> <!-- /main -->
 <!-- Floating export panel for client-side student answers.
+
      Included site-wide via include-after-body. Only appears on pages
+
      that contain .answer-field widgets. Nothing leaves the browser. -->
+
 <div id="answers-panel" class="answers-panel no-print" hidden="">
+
   <span class="answers-panel-label">My answers</span>
+
   <button type="button" id="answers-download" class="answers-btn">⬇ Download all</button>
+
   <button type="button" id="answers-copy" class="answers-btn">⧉ Copy this page</button>
+
   <span id="answers-status" class="answers-status" aria-live="polite"></span>
+
 </div>
+
 <script>
+
 (function () {
+
   "use strict";
+
   var PREFIX = "micronsws:";
+
   var pageKey = location.pathname;
+
   var pageTitle = (document.title || pageKey)
+
     .replace(/\s*[–—-]\s*MICrONS.*$/i, "").trim() || pageKey;
 
+
+
   function lsGet(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+
   function lsSet(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+
   function keyFor(id) { return PREFIX + pageKey + "::" + id; }
 
+
+
   var fields = Array.prototype.slice.call(document.querySelectorAll(".answer-field"));
+
   var panel = document.getElementById("answers-panel");
+
   if (!fields.length) { return; }          // no widgets on this page -> panel stays hidden
+
   if (panel) { panel.hidden = false; }
 
+
+
   // restore saved values + wire autosave
+
   fields.forEach(function (el) {
+
     var id = el.getAttribute("data-answer-id");
+
     var promptEl = el.previousElementSibling;
+
     var prompt = promptEl ? promptEl.textContent.trim() : id;
+
     var raw = lsGet(keyFor(id));
+
     if (raw) {
+
       try { var o = JSON.parse(raw); if (o && typeof o.v === "string") { el.value = o.v; } }
+
       catch (e) { el.value = raw; }
+
     }
+
     el.addEventListener("input", function () {
+
       lsSet(keyFor(id), JSON.stringify({ v: el.value, p: prompt, page: pageKey, title: pageTitle }));
+
     });
+
   });
 
+
+
   function collectAll() {
+
     var byPage = {};
+
     try {
+
       for (var i = 0; i < localStorage.length; i++) {
+
         var k = localStorage.key(i);
+
         if (k.indexOf(PREFIX) !== 0) { continue; }
+
         var o; try { o = JSON.parse(localStorage.getItem(k)); } catch (e) { continue; }
+
         if (!o || !o.v || !o.v.trim()) { continue; }
+
         var pg = o.title || o.page || "Answers";
+
         (byPage[pg] = byPage[pg] || []).push(o);
+
       }
+
     } catch (e) {}
+
     return byPage;
+
   }
+
+
 
   function toMarkdown(byPage) {
+
     var out = ["# MICrONS Workshop — my answers", "",
+
                "_Exported " + new Date().toLocaleString() + "_", ""];
+
     var pages = Object.keys(byPage);
+
     if (!pages.length) { return out.join("\n") + "\n\n(No answers recorded yet.)\n"; }
+
     pages.forEach(function (pg) {
+
       out.push("## " + pg, "");
+
       byPage[pg].forEach(function (o) { out.push("**" + (o.p || "Response") + "**", "", o.v, ""); });
+
     });
+
     return out.join("\n") + "\n";
+
   }
+
+
 
   function download(text) {
+
     var blob = new Blob([text], { type: "text/markdown;charset=utf-8" });
+
     var url = URL.createObjectURL(blob);
+
     var a = document.createElement("a");
+
     a.href = url;
+
     a.download = "microns-workshop-answers-" + new Date().toISOString().slice(0, 10) + ".md";
+
     document.body.appendChild(a); a.click(); document.body.removeChild(a);
+
     setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+
   }
+
+
 
   function flash(msg) {
+
     var s = document.getElementById("answers-status");
+
     if (!s) { return; }
+
     s.textContent = msg;
+
     setTimeout(function () { s.textContent = ""; }, 2500);
+
   }
+
+
 
   var dl = document.getElementById("answers-download");
+
   if (dl) { dl.addEventListener("click", function () { download(toMarkdown(collectAll())); flash("Downloaded ✓"); }); }
 
+
+
   var cp = document.getElementById("answers-copy");
+
   if (cp) {
+
     cp.addEventListener("click", function () {
+
       var one = {}; one[pageTitle] = [];
+
       fields.forEach(function (el) {
+
         var promptEl = el.previousElementSibling;
+
         one[pageTitle].push({ p: promptEl ? promptEl.textContent.trim() : el.getAttribute("data-answer-id"), v: el.value });
+
       });
+
       var text = toMarkdown(one);
+
       if (navigator.clipboard && navigator.clipboard.writeText) {
+
         navigator.clipboard.writeText(text).then(
+
           function () { flash("Copied this page ✓"); },
+
           function () { flash("Copy failed — use Download"); });
+
       } else { flash("Copy unsupported — use Download"); }
+
     });
+
   }
+
 })();
+
 </script>
+
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -658,7 +778,7 @@ The MICrONS Consortium, J. Alexander Bae, Mahaly Baptiste, et al. 2025. <span>�
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/bpdanskin\.github\.io\/MICrONS_workshop_puget_sound\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
