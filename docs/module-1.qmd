@@ -61,7 +61,17 @@ The boxes across the top of the EM panel are **layer** tabs. The `img` tab is th
 - {{< kbd left-click >}} a layer tab to toggle it on/off (a strikethrough means it is off).
 - Do **not** click the "x" or trashcan — that removes the layer entirely.
 
-![](resources/neuroglancer_2D_UI_2_menu.png){fig-align="right"}
+### Imagery brightness/contrast
+
+You can edit the brightness and contrast of the imagery layer with the "shader tool". You can either access this from:
+
+1. {{< kbd win=Right-Click mac=Ctrl-Click >}} on the `img` layer tab to open its settings in the right-hand panel.
+2. open the "Rendering" submenu 
+3. scroll down to the "shader controls"
+
+Or, use the Palette Tool shortcut (wrench in the open menu) and select: "Shader Controls". This opens a submenu within your view where you can adjust the brightness and contrast slider
+
+![](resources/module-1-shader-palette.png){fig-align="center"}
 
 ### Moving in the 3D (segmentation) panel
 
@@ -81,6 +91,8 @@ The boxes across the top of the EM panel are **layer** tabs. The `img` tab is th
 ::: {.callout-caution}
 This data is *anisotropic* — sections are thicker than they are wide. Keep the 2D plane square-on; if it rotates accidentally, hover over the 2D panel and press {{< kbd z >}} to reset. Toggle the section overlay in 3D with {{< kbd s >}}.
 :::
+
+* Select more segments with {{< kbd Double-Left-Click >}} to highlight the segment in both 2D and 3D. Double click again to hide (can still be found on your righthand segment menu)
 
 Take a couple of minutes to rotate, pan, zoom, and step through z until the controls feel natural.
 
